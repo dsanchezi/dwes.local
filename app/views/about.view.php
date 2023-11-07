@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<?php require_once 'inicio.part.php'; ?>
-
-
-<!-- Navigation Bar -->
-<?php require_once 'navegacion.part.php'; ?>
-<!-- End of Navigation Bar -->
-
 <!-- Principal Content Start-->
    <div id="about">
 
@@ -128,5 +120,3 @@
     <!-- End of container Box -->  
    </div>
 <!-- End of principal content -->
-
-<?php require_once 'fin.part.php'; ?>

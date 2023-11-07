@@ -1,9 +1,3 @@
-<?php require_once 'inicio.part.php'; ?>
-
-
-<!-- Navigation Bar -->
-    <?php require_once 'navegacion.part.php'; ?>
-<!-- End of Navigation Bar -->
 
     <!-- Principal Content Start -->
     <div id="index">
@@ -96,5 +90,3 @@
     </div>
     <!-- End of index box -->
 
-
-    <?php require_once 'fin.part.php'; ?>

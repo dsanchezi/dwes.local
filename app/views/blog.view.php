@@ -1,10 +1,3 @@
-<?php require_once 'inicio.part.php'; ?>
-
-
-<!-- Navigation Bar -->
-    <?php require_once 'navegacion.part.php'; ?>
-<!-- End of Navigation Bar -->
-
 <!-- Principal Content Start -->
    <div id="blog">
      <div class="container">
@@ -151,5 +144,3 @@
      </div>
    </div>
 <!-- End of Principal Content Start --> 
-
-<?php require_once 'fin.part.php'; ?>

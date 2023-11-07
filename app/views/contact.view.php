@@ -1,12 +1,3 @@
-<?php
-require_once __DIR__ . '/inicio.part.php';
-?>
-
-<!-- Navigation Bar -->
-<?php
-require_once __DIR__ . '/navegacion.part.php';
-?>
-<!-- End of Navigation Bar -->
 
 <!-- Principal Content Start -->
 <div id="contact">
@@ -90,7 +81,3 @@ require_once __DIR__ . '/navegacion.part.php';
   </div>
 </div>
 <!-- Principal Content Start -->
-
-<?php
-require_once __DIR__ . '/fin.part.php';
-?>

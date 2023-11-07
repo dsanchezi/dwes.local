@@ -1,8 +1,3 @@
-<?php
-require_once __DIR__ . '/inicio.part.php';
-require_once __DIR__. '/navegacion.part.php';
-?>
-
 <div class="hero hero-inner">
     <div class="container">
         <div class="row align-items-center">
@@ -56,7 +51,7 @@ require_once __DIR__. '/navegacion.part.php';
                         <label class="label-control">Descripción</label>
                         <textarea class="form-control" name="descripcion"><?= $descripcion ?></textarea>
                         <!-- CAPTCAHA -->
-                        <label class="label-control">Introduce el captcha <img style="border: 1px solid #D3D0D0 " src="../../src/utils/captcha.php" id='captcha'></label>
+                        <label class="label-control">Introduce el captcha <img style="border: 1px solid #D3D0D0" src="<?= __DIR__ . '\..\utils\captcha.php'?>" id='captcha'></label>
                         <input class="form-control" type="text" name="captcha">
                         <button class="pull-right btn btn-lg sr-button">ENVIAR</button>
                     </div>
@@ -69,6 +64,3 @@ require_once __DIR__. '/navegacion.part.php';
         </div>
     </div>
 </div>
-
-<?php
-require_once __DIR__. '/fin.part.php';

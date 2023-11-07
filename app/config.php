@@ -14,10 +14,20 @@ return [
 	'mailer' => [
 		'smtp_host' => 'portusapartamento.es',
 		'smtp_port' => '465',
-		'password' => 'P0rtusP0rtus#12',
+		'password' => 'xxxxxx',
 		'smtp_security' => 'PHPMailer::ENCRYPTION_SMTPS;',   //Habilitar el cifrado TLS
 		'username' => 'info@portusapartamento.es',
 		'email' => 'info@portusapartamento.es',
 		'nombre' => 'Darío Sánchez',
+	],
+	'logs' => [
+		'filename' => 'curso.log',
+		'level' => \Monolog\Logger::WARNING
+	],
+	'routes' => [
+		'filename' => 'routes.php'
+	],
+	 'project' => [
+		'namespace' => 'dwes'
 	]
 ];
