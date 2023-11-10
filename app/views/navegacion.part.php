@@ -1,4 +1,5 @@
 <?php
+
 use dwes\app\utils\Utils;
 ?>
 
@@ -16,47 +17,65 @@ use dwes\app\utils\Utils;
     </div>
     <div class="collapse navbar-collapse navbar-right" id="menu">
       <ul class="nav navbar-nav">
-        <?php 
-        if (Utils::esOpcionMenuActiva('/')==true || Utils::esOpcionMenuActiva('/')==true)
-          echo '<li class="active lien">'; 
+        <?php
+        if (Utils::esOpcionMenuActiva('/') == true || Utils::esOpcionMenuActiva('/') == true)
+          echo '<li class="active lien">';
         else echo '<li class="lien">';
         ?>
-          <a href="/"><i class="fa fa-home sr-icons"></i> Home</a>
+        <a href="/"><i class="fa fa-home sr-icons"></i> Home</a>
         </li>
-        <?php 
-        if (Utils::esOpcionMenuActiva('/galeria')==true )
-          echo '<li class="active lien">'; 
-        else echo '<li class="lien">';
-        ?>
+        <?php if (is_null($app['user'])) : ?>
+          <?php if (Utils::esOpcionMenuActiva('/login') == true) echo '<li class="active lien">';
+          else echo '<li class=" lien">'; ?>
+          <a href="/login"><i class="fa fa-user-secret sr-icons"></i> Login</a></li>
+          <li class="<?= Utils::esOpcionMenuActiva('/registro') ? 'active' : '' ?> lien">
+            <a href="<?= Utils::esOpcionMenuActiva('/registro') ? '#' : '/registro' ?>">
+              <i class="fa fa-sign-in sr-icons"></i> Registro</a>
+          </li>
+
+        <?php else : ?>
+
+          <?php
+          if (Utils::esOpcionMenuActiva('/galeria') == true)
+            echo '<li class="active lien">';
+          else echo '<li class="lien">';
+          ?>
           <a href="/galeria"><i class="fa fa-bookmark sr-icons"></i> Galería </a>
-        </li>
-        <?php 
-        if (Utils::esOpcionMenuActiva('/asociados')==true )
-          echo '<li class="active lien">'; 
-        else echo '<li class="lien">';
-        ?>
+          </li>
+          <?php
+          if (Utils::esOpcionMenuActiva('/asociados') == true)
+            echo '<li class="active lien">';
+          else echo '<li class="lien">';
+          ?>
           <a href="/asociados"><i class="fa fa-bookmark sr-icons"></i> Asociados </a>
-        </li>
-        <?php 
-        if (Utils::esOpcionMenuActiva('/about')==true )
-          echo '<li class="active lien">'; 
+          </li>
+
+          <?php if (Utils::esOpcionMenuActiva('/logout') == true) echo '<li class="active lien">';
+          else echo '<li class=" lien">'; ?>
+          <a href="/logout"><i class="fa fa-sign-out sr-icons"></i> <?= $app['user']->getUsername() ?></a></li>
+        <?php endif; ?>
+
+
+        <?php
+        if (Utils::esOpcionMenuActiva('/about') == true)
+          echo '<li class="active lien">';
         else echo '<li class="lien">';
         ?>
-          <a href="/about"><i class="fa fa-bookmark sr-icons"></i> About</a>
+        <a href="/about"><i class="fa fa-bookmark sr-icons"></i> About</a>
         </li>
-        <?php 
-        if (Utils::esOpcionMenuActiva('/blog')==true )
-          echo '<li class="active lien">'; 
+        <?php
+        if (Utils::esOpcionMenuActiva('/blog') == true)
+          echo '<li class="active lien">';
         else echo '<li class="lien">';
         ?>
-          <a href="/blog"><i class="fa fa-file-text sr-icons"></i> Blog</a>
+        <a href="/blog"><i class="fa fa-file-text sr-icons"></i> Blog</a>
         </li>
-        <?php 
-        if (Utils::esOpcionMenuActiva('/contact')==true )
-          echo '<li class="active lien">'; 
+        <?php
+        if (Utils::esOpcionMenuActiva('/contact') == true)
+          echo '<li class="active lien">';
         else echo '<li class="lien">';
         ?>
-          <a href="/contact"><i class="fa fa-phone-square sr-icons"></i> Contact</a>
+        <a href="/contact"><i class="fa fa-phone-square sr-icons"></i> Contact</a>
         </li>
       </ul>
     </div>
