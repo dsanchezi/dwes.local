@@ -9,5 +9,4 @@ class QueryException extends AppException
     {
         parent::__construct($message, $code);
     }
-
 }
